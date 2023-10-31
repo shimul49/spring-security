@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "761956e4-9dcb-4e5b-abfa-3f2c1ec26e59",
+		"name": "Spring Security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18642756",
+		"_collection_link": "https://universal-moon-388685.postman.co/workspace/Snow-Leopard~bffe7479-6933-4a22-aa03-2af8226a2057/collection/18642756-761956e4-9dcb-4e5b-abfa-3f2c1ec26e59?action=share&source=collection_link&creator=18642756"
+	},
+	"item": [
+		{
+			"name": "User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/hello/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/hello/admin",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Makshud\",\r\n    \"lastName\": \"Rahman\",\r\n    \"email\": \"makbul@naztech.us.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8611/api/v1/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8611",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"makbul@naztech.us.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8611/api/v1/auth/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "8611",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resource",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYWtidWxAbmF6dGVjaC51cy5jb20iLCJpYXQiOjE2OTQzNDA4MjYsImV4cCI6MTY5NDM0MjI2Nn0.m--ynkCKb_AxAdS6gDabv03UjQjfD_sgpktyLWvyAew",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8611/api/v1/resource",
+					"host": [
+						"localhost"
+					],
+					"port": "8611",
+					"path": [
+						"api",
+						"v1",
+						"resource"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYWtidWxAbmF6dGVjaC51cy5jb20iLCJpYXQiOjE2OTQzNDA4MjYsImV4cCI6MTY5NDM0MjI2Nn0.m--ynkCKb_AxAdS6gDabv03UjQjfD_sgpktyLWvyAew",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"makbul@naztech.us.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8611/api/v1/resource/get-info",
+					"host": [
+						"localhost"
+					],
+					"port": "8611",
+					"path": [
+						"api",
+						"v1",
+						"resource",
+						"get-info"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
